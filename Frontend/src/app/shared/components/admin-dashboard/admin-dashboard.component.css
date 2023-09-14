@@ -1,0 +1,10 @@
+.card {
+    height: 280px;
+}
+
+@media only screen and (max-width: 1200px)  
+{
+    .card {
+        height: 250px;
+    }
+}

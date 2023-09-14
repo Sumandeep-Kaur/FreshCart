@@ -1,0 +1,177 @@
+<app-header></app-header>
+
+<div class="container py-5 position-relative">
+
+    <div class="mb-4 d-md-flex justify-content-md-between rounded" style="background-color: #f0f3f2 !important;">
+        <div class="pt-5 ps-5">
+            <h1 class="fw-bold text-success">Shop Cart</h1>
+            <p class="fs-5">Continue your shopping</p>
+        </div>
+        <div class="py-4">
+            <img src="https://freshcart.codescandy.com/assets/images/svg-graphics/store-graphics.svg" alt=""
+                class="img-fluid">
+        </div>
+    </div>
+
+    <div *ngIf="cartItems.length > 0" class="row">
+        <div class="col-lg-8 col-md-7">
+            <div class="py-3">
+                <ul class="list-group list-group-flush" *ngFor="let item of cartItems">
+                    <li class="list-group-item py-3 py-lg-0 px-0 border-top">
+                        <div class="row align-items-center">
+                            <div class="col-1 form-check">
+                                <input class="form-check-input" type="checkbox" value={{item.id}} checked (change)="updateOrderItems($event.target)">
+                              </div>
+                            <div class="col-3 col-md-2">
+                                <img src={{item.product.imageUrl}} alt="image" class="img-fluid">
+                            </div>
+                            <div class="col-4 col-md-4">
+                                <a [routerLink]="['/product-details', item.product.id]"
+                                    class="text-inherit text-decoration-none text-dark">
+                                    <h6 class="mb-0">{{item.product.name}}</h6>
+                                </a>
+                                <span><small class="text-muted">{{item.product.specs}}</small></span>
+                                <div class="mt-2 small">
+                                    <button class="btn p-0 btn-outline-light" (click)="deleteItem(item.id)">
+                                        <span class="me-1">
+                                            <i class="fa fa-trash text-danger"></i>
+                                        </span>
+                                            <span class="text-muted">Remove</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-2 col-md-3 col-lg-2">
+                                <div class="d-flex">
+                                    <button (click)="decrement(item)" class="btn btn-sm btn-outline-secondary"
+                                        type="button">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                    <input class="form-control text-center mx-1" type="num" value={{item.quantity}}
+                                        style="max-width: 3rem;">
+                                    <button (click)="increment(item)" class="btn btn-sm btn-outline-secondary"
+                                        type="button">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div class="col-3 text-lg-end text-start text-md-end col-md-3">
+                                <span class="text-dark fw-bold" *ngIf="!item.product.discount">Rs. {{ item.product.price
+                                    }}</span>
+                                <span class="text-dark fw-bold" *ngIf="item.product.discount">Rs. {{ (item.product.price -
+                                    item.product.discount)
+                                    }} </span>
+                                <span class="text-decoration-line-through text-muted"
+                                    *ngIf="item.product.discount">Rs. {{item.product.price}} </span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- btn -->
+                <div class="d-flex justify-content-between mt-4">
+                    <a class="btn btn-success" (click)="makeOrder()">Continue Shopping</a>
+                    <!-- <a class="btn btn-dark" (click)="updateCart()">Update Cart</a> -->
+                </div>
+
+            </div>
+        </div>
+
+        <!-- sidebar -->
+        <div class="col-12 col-lg-4 col-md-5">
+            <!-- card -->
+            <div class="mb-5 card mt-3">
+                <div class="card-body p-6">
+                    <!-- heading -->
+                    <h2 class="h5 mb-4">Summary</h2>
+                    <div class="card mb-2">
+                        <!-- list group -->
+                        <ul class="list-group list-group-flush">
+                            <!-- list group item -->
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="me-auto">
+                                    <div>Item Subtotal</div>
+
+                                </div>
+                                <span>Rs. {{getTotalPrice()}}</span>
+                            </li>
+
+                            <!-- list group item -->
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="me-auto">
+                                    <div>Discount</div>
+
+                                </div>
+                                <span>Rs. {{getTotalDiscount()}}</span>
+                            </li>
+                            <!-- list group item -->
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="me-auto">
+                                    <div class="fw-bold">Subtotal</div>
+
+                                </div>
+                                <span class="fw-bold">Rs. {{getTotalPrice() - getTotalDiscount()}}</span>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="d-grid mb-1 mt-4">
+                        <!-- btn -->
+                        <button class="btn btn-success btn-lg d-flex justify-content-between align-items-center"
+                            type="submit">
+                            Go to Checkout <span class="fw-bold">Rs. {{getTotalPrice() -
+                                getTotalDiscount()}}</span></button>
+                    </div>
+                    <!-- text -->
+                    <p>
+                        <small>By placing your order, you agree to be bound by the Freshcart
+                            <a class="text-success text-decoration-none">Terms of Service</a> and <a
+                                class="text-success text-decoration-none">Privacy Policy.</a>
+                        </small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="cartItems.length == 0" class="d-flex flex-column">
+        <div class="row mt-4 justify-content-center align-items-center">
+            <div class="col-lg-11">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-5">
+                        <img src="https://cdn.dribbble.com/users/2058104/screenshots/4198771/dribbble.jpg" alt=""
+                            class="img-fluid">
+                    </div>
+                    <div class="col-md-7">
+                        <h1 class="text-success mb-3">Your shopping cart is empty!</h1>
+                        <p class="lead mb-5">
+                            You have no items in your shopping cart. Before proceed to checkout you must add some
+                            products to your shopping cart.
+                            You will find a lot of interesting products on our shop page.
+                        </p>
+                        <button routerLink="/home" class="btn btn-success">Explore Products</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="orderPlaced" class="d-flex justify-content-center align-items-center position-absolute successModal">
+        <div class="card  bg-white shadow p-5">
+            <div class="mb-4 text-center text-success">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-success" width="75" height="75" fill="currentColor"
+                    class="bi bi-check-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path
+                        d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                </svg>
+            </div>
+            <div class="text-center">
+                <h1 class="text-success">Thank You for shopping with us!</h1>
+                <p class="lead">Your order is placed successfully! </p>
+                <button class="btn btn-success me-2" routerLink="/my-orders">Order Details</button>
+                <button class="btn btn-success" routerLink="/home">Back Home</button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

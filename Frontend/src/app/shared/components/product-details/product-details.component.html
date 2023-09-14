@@ -1,0 +1,190 @@
+<app-header></app-header>
+
+<div class="container">
+    <div class="row gx-4 gx-lg-5 align-items-center">
+        <div class="col-md-6">
+            <img class="card-img-top mb-5 mb-md-0" src={{product.imageUrl}} alt="image">
+        </div>
+        <div class="col-md-6">
+            <h4 class="mb-2">Category: {{product.category.categoryName}} </h4>
+            <h2 class="display-6 fw-bold text-success">{{ product.name }}</h2>
+            <p class="lead fw-bold">{{product.specs}}</p>
+            <div class="fs-5 my-3">
+                <h3 class="text-dark d-inline-block me-2" *ngIf="!product.discount">Rs. {{ product.price }}</h3>
+                <h3 class="text-dark d-inline-block me-2" *ngIf="product.discount">Rs. {{ (product.price -
+                    product.discount) }} </h3>
+                <h4 class="text-decoration-line-through text-muted d-inline-block" *ngIf="product.discount">
+                    Rs. {{product.price}}</h4>
+                <h5 *ngIf="product.discount" class="text-warning">{{((product.discount * 100) / product.price) | number : '1.2-2'}}% off
+                </h5>
+            </div>
+            <h5>Avalilability: <span *ngIf="product.unitsInStock > 0" class="badge bg-success">In Stock</span>
+                <span *ngIf="product.unitsInStock == 0" class="badge bg-danger">Out Of Stock</span>
+            </h5>
+            <p class="lead">{{ product.description }}</p>
+            <div class="d-flex">
+                <button class="btn btn-outline-secondary" type="button" (click)="decrement()">
+                    <i class="fa fa-minus"></i>
+                </button>
+                <input class="form-control text-center mx-1 btn btn-outline-secondary" min="1" step="1" type="num"
+                    value={{quantity}} style="max-width: 3rem;">
+                <button (click)="increment()" class="btn btn-outline-secondary" type="button">
+                    <i class="fa fa-plus"></i>
+                </button>
+                <button class="btn btn-success ms-3" type="button" (click)="addToCart(product)">
+                    <i class="fa fa-cart-plus"></i>
+                    Add to cart
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="my-4">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="me-lg-5 mb-4 mb-md-0">
+                            <div class="mb-4">
+                                <!-- title -->
+                                <h4 class="mb-2">Customer reviews</h4>
+                                <span *ngIf="avgRating">
+                                    <span *ngFor="let star of generateStars()">
+                                        <i class="fa fa-star text-warning"></i>
+                                    </span>
+                                    <span class="ms-2">{{avgRating}} out of 5</span>
+                                    <small class="ms-3">{{totalReviews}} global ratings</small>
+                                </span>
+                                <span *ngIf="!avgRating">
+                                    <h6 class="mt-2">No ratings yet!</h6>
+                                </span>
+                            </div>
+                            <!--Progress-->
+                            <div class="mb-4">
+                                <div *ngFor="let rating of ratings; let i = index;"
+                                    class="d-flex align-items-center mb-2">
+                                    <div class="text-nowrap me-3 text-muted">
+                                        <span class="d-inline-block align-middle text-muted">{{i+1}}<i
+                                                class="fa fa-star text-warning"></i>
+                                        </span>
+                                    </div>
+                                    <div class="w-100">
+                                        <div class="progress" style="height: 6px;">
+                                            <div class="progress-bar bg-warning" role="progressbar"
+                                                [style.width.%]="(rating * 100)/totalReviews" aria-valuenow="60"
+                                                aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <span *ngIf="rating > 0" class="text-muted ms-3">{{(rating *
+                                        100)/totalReviews}}%</span>
+                                    <span *ngIf="rating == 0" class="text-muted ms-3">0%</span>
+                                </div>
+                            </div>
+                            <div class="d-grid">
+                                <h4>Review this product</h4>
+                                <p class="mb-0">Share your thoughts with other customers.</p>
+                                <button *ngIf="isAuthenticated()" class="btn btn-outline-secondary mt-4" data-bs-toggle="modal"
+                                data-bs-target="#addModal">Write your Review</button>
+                                <button *ngIf="!isAuthenticated()" class="btn btn-outline-secondary mt-4" (click)="noAccess()">Write your Review</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- col -->
+                    <div class="col-md-8" *ngIf="product.reviews.length > 0">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4>Reviews</h4>
+                        </div>
+                        <div *ngFor="let review of product.reviews">
+                            <div class="d-flex border-bottom py-4">
+                                <img src="https://i.pinimg.com/originals/0d/64/98/0d64989794b1a4c9d89bff571d3d5842.jpg"
+                                    alt="" class="rounded-circle img-fluid" style="height: 50px;">
+                                <div class="ms-3">
+                                    <h6 class="mb-1">
+                                        {{review.userName}}
+                                    </h6>
+                                    <p class="small"> <span class="text-muted">{{getDate(review.reviewDate)}}</span>
+                                        <span class="text-primary ms-3 fw-bold">Verified User</span>
+                                    </p>
+                                    <!-- rating -->
+                                    <div class=" mb-2">
+                                        <span *ngFor="let star of generateStars(review.rating)">
+                                            <i class="fa fa-star text-warning"></i>
+                                        </span>
+                                        <span class="ms-3 text-dark fw-bold">{{review.title}}</span>
+                                    </div>
+                                    <!-- text-->
+                                    <p>{{review.description}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8" *ngIf="product.reviews.length == 0">
+                        <div class="mb-5">
+                            <h4>Reviews</h4>
+                        </div>
+                        <img src="https://shop.millenniumbooksource.com/static/images/no.png" alt="" class="img-fluid" style="height: 200px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header p-md-2">
+                    <h5 class="modal-title" style="color: #515f7d;">Add Review</h5>
+                    <button type="button" class="close border-0" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form novalidate [formGroup]="addForm">
+                        <div class="form-outline mb-3">
+                            <label class="form-label fw-bold">Overall Rating</label> <br>
+                            <span *ngFor="let star of stars; let i = index" (click)="rate(i + 1)">
+                                <ng-container *ngIf="star; else noStar"><i
+                                        class="fa fa-star text-warning fs-4"></i></ng-container>
+                                <ng-template #noStar><i class="fa-regular fa-star fs-4 text-warning"></i>
+                                </ng-template>
+                            </span>
+                        </div>
+
+                        <div class="form-outline mb-3">
+                            <label class="form-label">Title</label>
+                            <input type="text" class="form-control" formControlName="title"
+                                placeholder="Enter Product name" [class.is-invalid]="Title.invalid && Title.touched" />
+                            <span *ngIf="Title.invalid && Title.touched">
+                                <small *ngIf="Title.errors?.required" class="text-danger">Review is required</small>
+                            </span>
+                        </div>
+
+                        <div class="form-outline mb-3">
+                            <label class="form-label">Description</label>
+                            <textarea type="text" class="form-control" formControlName="description"
+                                placeholder="What did you like or dislike? How is your experience with the Freshcart?"
+                                [class.is-invalid]="Description.invalid && Description.touched"> </textarea>
+                            <span *ngIf="Description.invalid && Description.touched">
+                                <small *ngIf="Description.errors?.required" class="text-danger">Describe your expreience
+                                    in few words.</small>
+                                <small *ngIf="Description.errors?.maxLength" class="text-danger">Description can have
+                                    max 255 alphanumeric characters.</small>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" [disabled]="!addForm.valid" (click)="addReview()"
+                        class="btn btn-primary">Add</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-footer></app-footer>

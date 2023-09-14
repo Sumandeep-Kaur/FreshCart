@@ -1,0 +1,32 @@
+<div class="container my-5">
+    <div class="row mb-4">
+        <h3 class="fs-2 text-success">Popular Products</h3>
+    </div>
+
+    <div class="row g-4 row-cols-lg-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
+        <div class="col" *ngFor="let product of products">
+            <div class="card">
+                <div class="card-body">
+                    <a>
+                        <img src={{product.imageUrl}} alt="image" class="mb-2 img-fluid w-100">
+                    </a>
+                    <div class="text-small mb-1">
+                        <small> {{product.category.categoryName}} </small>
+                    </div>
+                    <h2 class="fs-6"> {{product.name}} </h2>
+                    <div class="d-flex justify-content-between align-items-center mt-2">
+                        <div>
+                            <span class="text-dark" *ngIf="!product.discount">Rs.{{ product.price }}</span>
+                            <span class="text-dark" *ngIf="product.discount">Rs.{{ (product.price - product.discount) }} </span>
+                            <span class="text-decoration-line-through text-muted" *ngIf="product.discount">Rs.{{product.price}} </span>
+                        </div>
+                        <div class="">
+                            <button [routerLink]="['/product-details', product.id]" class="btn btn-sm btn-outline-success me-2"><i class="fa fa-eye"></i></button>
+                            <button (click)="addToCart(product)" class="btn btn-sm btn-outline-success"><i class="fa fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

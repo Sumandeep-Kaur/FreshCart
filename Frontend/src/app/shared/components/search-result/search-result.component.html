@@ -1,0 +1,72 @@
+<app-header></app-header>
+
+<div class="container py-5">
+    <div class="mb-3 d-flex justify-content-between">
+        <div class="card-body">
+            <h2 class="fs-2">{{product | uppercase}}</h2>
+            <p class="lead"> {{products.length}} Products found </p>
+        </div>
+        <div *ngIf="products.length > 0">
+            <button (click)="sortProducts()" class="btn btn-outline-success fw-bold px-4">Sort by Price</button>
+        </div>
+    </div>
+
+    <div class="row g-4 row-cols-1 w-75">
+        <div class="col" *ngFor="let product of products">
+            <div class="card card-product">
+                <div class="card-body">
+                    <div class=" row align-items-center">
+                        <div class="col-md-4 col-12">
+                            <div class="text-center position-relative ">
+                                <a>
+                                    <img src={{product.imageUrl}} alt="image" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-12 flex-grow-1">
+                            <div class="mb-1">
+                                <h5 class="">{{product.category.categoryName}}</h5>
+                            </div>
+                            <h3 class="text-success">{{product.name}}</h3>
+                            <div class="d-flex align-items-baseline">
+                                <h4 class="me-1">Rs. {{ product.price -product.discount }}</h4>
+                                <h5 *ngIf="product.discount"
+                                    class="text-decoration-line-through text-muted me-3 font-weight-regular">Rs. {{
+                                    product.price }}</h5>
+                                <h5 *ngIf="product.discount" class="text-warning">{{((product.discount * 100) /
+                                    product.price)}}% off</h5>
+                            </div>
+                            <small class="text-muted">
+                                {{ product.description }}
+                            </small>
+                            <div class="mt-3">
+                                <a [routerLink]="['/product-details', product.id]" class="btn btn-outline-success me-2">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                                <a (click)="addToCart(product)" class="btn btn-success"><i class="fa fa-cart-plus"></i> Add to Cart</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div *ngIf="products.length == 0" class="">
+            <div class="card shadow p-4">
+                <div class="mb-4 text-center">
+                    <img src="https://img.freepik.com/free-icon/search_318-805848.jpg" alt="" class="img-fluid" style="width: 200px;">
+                </div>
+                <div class="text-center">
+                    <h1 class="text-success">SORRY!</h1>
+                    <p class="lead">No Results Found. </p>
+                    <button class="btn btn-success" routerLink="/home">Back Home</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--pagination-->
+</div>
+
+<app-footer></app-footer>

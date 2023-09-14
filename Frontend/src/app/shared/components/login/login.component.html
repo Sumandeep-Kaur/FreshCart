@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div class="container py-5">
+  <div class="p-5"
+    style="background: url('https://www.fultonbank.com/-/media/Feature/Teaser/Education-Center/Budget/Groceries_TN.ashx') no-repeat; background-size: cover; border-radius: .5rem; background-position: bottom; height:480px">
+    <div class="col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8 bg-white p-4 rounded">
+      <h5 class="fs-3 fw-bold text-success">Login to FreshCart</h5>
+      <p>Welcome back to FreshCart! Enter your Email to get started</p>
+      <form [formGroup]="loginForm">
+        <div class="mb-3 mt-3">
+          <label class="form-label">Email address</label>
+          <input type="email" class="form-control" formControlName="email" placeholder="Enter Email address"
+            [ngClass]="{'is-invalid': (Email.touched || Email.dirty) && !Email.valid}">
+          <span *ngIf="Email.invalid && Email.touched">
+            <small *ngIf="Email.errors?.required" class="text-danger">Email is required</small>
+            <small *ngIf="Email.errors?.email" class="text-danger">Enter valid email address</small>
+          </span>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" formControlName="password" placeholder="Enter Password"
+            [ngClass]="{'is-invalid': (Password.touched || Password.dirty) && !Password.valid}">
+          <span *ngIf="Password.invalid && Password.touched">
+            <small *ngIf="Password.errors?.required" class="text-danger">Password is required</small>
+            <small *ngIf="Password.errors?.pattern" class="text-danger">Password must be atleast 8 characters long, contain atleast one number, one uppercase and one lowercase character.</small>
+          </span>
+        </div>
+
+        <button type="submit" (click)="login()" class="btn btn-success px-4">Login</button>
+      </form>
+      <div class="mt-2">
+        Don't have an account? <a class="text-success" routerLink="/signup">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

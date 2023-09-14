@@ -1,0 +1,78 @@
+<app-header></app-header>
+
+<div class="container py-5">
+    <div class="mb-4 d-md-flex justify-content-md-between rounded" style="background-color: #f0f3f2 !important;">
+        <div class="pt-5 ps-5">
+            <h1 class="fw-bold text-success">Your Orders</h1>
+        </div>
+        <div class="py-4">
+            <img src="https://freshcart.codescandy.com/assets/images/svg-graphics/store-graphics.svg" alt=""
+                class="img-fluid">
+        </div>
+    </div>
+
+    <div *ngIf="orderItems.length > 0" class="py-6 p-md-6 p-lg-10">
+        <div class="table-responsive text-center border-0">
+            <table class="table mb-0 text-nowrap table-centered ">
+                <thead class="bg-light">
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Product</th>
+                        <th>Order Id</th>
+                        <th>Date</th>
+                        <th>Items</th>
+                        <th>Status</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let order of orderItems">
+                        <td class="align-middle border-top-0 w-0">
+                            <img src={{order.product.imageUrl}} alt="image" class="img-fluid" style="width: 150px;">
+                        </td>
+                        <td class="align-middle border-top-0">
+                            <a class="fw-semi-bold text-inherit text-decoration-none">
+                                <h6 class="mb-0 text-dark">{{order.product.name}}</h6>
+                            </a>
+                            <span><small class="text-muted">{{order.product.specs}}</small></span>
+                        </td>
+                        <td class="align-middle border-top-0">
+                            <span class="text-inherit">#{{order.id}}</span>
+                        </td>
+                        <td class="align-middle border-top-0">{{getDate(order.orderDate)}}</td>
+                        <td class="align-middle border-top-0">{{order.quantity}}</td>
+                        <td class="align-middle border-top-0">
+                            <span class="badge bg-warning">Processing</span>
+                        </td>
+                        <td class="align-middle border-top-0">
+                            Rs. {{order.totalPrice}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div *ngIf="orderItems.length == 0" class="d-flex flex-column">
+        <div class="row mt-4 justify-content-center align-items-center">
+            <div class="col-lg-11">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-5">
+                        <img src="https://cdn.dribbble.com/users/2058104/screenshots/4198771/dribbble.jpg" alt=""
+                            class="img-fluid">
+                    </div>
+                    <div class="col-md-7">
+                        <h1 class="text-success mb-3">Your orders list is empty!</h1>
+                        <p class="lead mb-5">
+                            You have no orders placed yet. Explore our products to find something to order.
+                            You will find a lot of interesting products on our shop page.
+                        </p>
+                        <button routerLink="/home" class="btn btn-success">Explore Products</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,14 @@
+C:\Users\sumandeepkaur\source\repos\GroceryStore\Data\GroceryStore.Data\bin\Debug\net5.0\GroceryStore.Data.deps.json
+C:\Users\sumandeepkaur\source\repos\GroceryStore\Data\GroceryStore.Data\bin\Debug\net5.0\GroceryStore.Data.runtimeconfig.json
+C:\Users\sumandeepkaur\source\repos\GroceryStore\Data\GroceryStore.Data\bin\Debug\net5.0\GroceryStore.Data.runtimeconfig.dev.json
+C:\Users\sumandeepkaur\source\repos\GroceryStore\Data\GroceryStore.Data\bin\Debug\net5.0\GroceryStore.Data.dll
+C:\Users\sumandeepkaur\source\repos\GroceryStore\Data\GroceryStore.Data\bin\Debug\net5.0\ref\GroceryStore.Data.dll
+C:\Users\sumandeepkaur\source\repos\GroceryStore\Data\GroceryStore.Data\bin\Debug\net5.0\GroceryStore.Data.pdb
+C:\Users\sumandeepkaur\source\repos\GroceryStore\Data\GroceryStore.Data\obj\Debug\net5.0\GroceryStore.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sumandeepkaur\source\repos\GroceryStore\Data\GroceryStore.Data\obj\Debug\net5.0\GroceryStore.Data.AssemblyInfoInputs.cache
+C:\Users\sumandeepkaur\source\repos\GroceryStore\Data\GroceryStore.Data\obj\Debug\net5.0\GroceryStore.Data.AssemblyInfo.cs
+C:\Users\sumandeepkaur\source\repos\GroceryStore\Data\GroceryStore.Data\obj\Debug\net5.0\GroceryStore.Data.csproj.CoreCompileInputs.cache
+C:\Users\sumandeepkaur\source\repos\GroceryStore\Data\GroceryStore.Data\obj\Debug\net5.0\GroceryStore.Data.dll
+C:\Users\sumandeepkaur\source\repos\GroceryStore\Data\GroceryStore.Data\obj\Debug\net5.0\ref\GroceryStore.Data.dll
+C:\Users\sumandeepkaur\source\repos\GroceryStore\Data\GroceryStore.Data\obj\Debug\net5.0\GroceryStore.Data.pdb
+C:\Users\sumandeepkaur\source\repos\GroceryStore\Data\GroceryStore.Data\obj\Debug\net5.0\GroceryStore.Data.genruntimeconfig.cache
