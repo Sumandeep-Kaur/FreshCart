@@ -1,0 +1,77 @@
+.hero-section {
+    background-image: url('/assets/images/home-bg.jpeg');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 0.5rem;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+  }
+
+  .content-wrapper {
+    padding: 4rem 3rem;
+    width: 100%;
+    
+    @media (min-width: 768px) {
+      padding: 4rem 4rem;
+      width: 60%;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 4rem 5rem;
+      width: 50%;
+    }
+  }
+
+  .text-content {
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+  .btn-dark {
+    padding: 0.625rem 1.25rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  }
+
+  h2 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    
+    @media (max-width: 576px) {
+      font-size: 2rem;
+    }
+  }
+
+  .lead {
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+    
+    @media (max-width: 576px) {
+      font-size: 1rem;
+    }
+  }
+
+  .banner-section {
+    background: url('../../../../../assets/images/banner-bg.png') no-repeat bottom right;
+    height: 60vh;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .banner-section {
+      height: 60vh;
+      padding: 20px;
+    }
+  }
+
+.bg-cream {
+  background-color: #FFF6EA;
+}

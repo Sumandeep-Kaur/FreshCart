@@ -1,0 +1,52 @@
+<div class="container py-5">
+  <div class="d-flex align-items-center justify-content-center">
+    <div class="card border-0 shadow-sm" style="width: 450px;">
+      <div class="card-body p-5">
+        <!-- Header -->
+        <div class="text-center mb-5">
+          <h1 class="h3 mb-1 fw-semibold text-success">Sign In to FreshCart</h1>
+          <p class="text-muted"><i>Welcome back! Please enter your details.</i></p>
+        </div>
+
+        <!-- Form -->
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="email" class="form-label mb-0">Email Address</label>
+            <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter your email"
+              [class.is-invalid]="email?.invalid && email?.touched">
+            @if (email?.invalid && email?.touched) {
+            <div class="invalid-feedback">
+              Please enter a valid email address
+            </div>
+            }
+          </div>
+
+          <div class="mb-4">
+            <label for="password" class="form-label mb-0">Password</label>
+            <input type="password" class="form-control" id="password" formControlName="password"
+              placeholder="Enter your password" [class.is-invalid]="password?.invalid && password?.touched">
+            @if (password?.invalid && password?.touched) {
+            <div class="invalid-feedback">
+              Password is required
+            </div>
+            }
+          </div>
+
+          <button type="submit" class="btn btn-success w-100 mb-3" [disabled]="loginForm.invalid || isLoading">
+            @if (isLoading) {
+            <span class="spinner-border spinner-border-sm me-2"></span>
+            Signing in...
+            } @else {
+            Sign In
+            }
+          </button>
+
+          <div class="text-center">
+            <span class="text-muted">Don't have an account? </span>
+            <a routerLink="/auth/register" class="text-success text-decoration-none">Sign Up</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

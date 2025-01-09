@@ -1,0 +1,204 @@
+<section class="container py-4">
+  <!-- Header Card -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="card border-0 rounded-4 bg-light position-relative overflow-hidden">
+        <div class="card-body p-4 p-lg-5">
+          <div class="position-relative z-1">
+            <h1 class="display-5 fw-bold">Admin - FreshCart</h1>
+            <p class="lead">Easily manage FreshCart Products here!</p>
+            <button type="button" class="btn btn-success mt-3" (click)="openAddModal()">
+              Add Product
+            </button>
+          </div>
+          <div class="position-absolute top-0 start-0 w-100 h-100 z-0"
+            style="background: url('../../../../../assets/images/admin-bg.jpg') center/cover no-repeat;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Products List -->
+  <div class="row my-4">
+    <div class="col-12">
+      <h2 class="mb-4 text-success">All Products</h2>
+
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        @for (product of products(); track product.id) {
+        <div class="col">
+          <div class="card h-100">
+            <div class="row g-0">
+              <div class="col-4 p-2">
+                <img [src]="product.imageUrl" [alt]="product.name"
+                  class="img-fluid rounded h-100 w-100 object-fit-cover">
+              </div>
+              <div class="col-8">
+                <div class="card-body position-relative">
+                  <div class="d-flex justify-content-between align-items-start">
+                    <h5 class="card-title mb-2">{{ product.name }}</h5>
+                    <div class="btn-group">
+                      <button class="btn btn-success btn-sm me-2" (click)="openEditModal(product)">
+                        <i class="fas fa-edit"></i> Edit
+                      </button>
+                      <button class="btn btn-danger btn-sm" (click)="deleteProduct(product.id)">
+                        <i class="fas fa-trash"></i> Delete
+                      </button>
+                    </div>
+                  </div>
+
+                  <p class="mb-2">Category: {{ product.categoryName }}</p>
+
+                  <div class="mb-2">
+                    @if (product.stock > 0) {
+                    <span class="badge bg-success">In Stock ({{ product.stock }})</span>
+                    } @else {
+                    <span class="badge bg-danger">Out of Stock</span>
+                    }
+                  </div>
+
+                  <div class="d-flex align-items-baseline flex-wrap gap-2">
+                    <h4 class="mb-0">${{ calculateDiscountedPrice(product) }}</h4>
+                    @if (product.discountPercentage) {
+                    <h5 class="text-decoration-line-through text-muted mb-0">
+                      ${{ product.price }}
+                    </h5>
+                    <span class="text-warning">
+                      {{ product.discountPercentage }}% off
+                    </span>
+                    }
+                  </div>
+
+                  <p class="card-text mt-2 small text-muted">
+                    {{ product.description }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  @if (showModal()) {
+  <div class="modal fade show d-block" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">
+            {{ isEditMode() ? 'Edit Product' : 'Add New Product' }}
+          </h5>
+          <button type="button" class="btn-close" (click)="closeModal()"></button>
+        </div>
+
+        <div class="modal-body">
+          <form [formGroup]="productForm" class="needs-validation">
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" formControlName="name"
+                [class.is-invalid]="isFieldInvalid('name')">
+              @if (isFieldInvalid('name')) {
+              <div class="invalid-feedback">
+                @if (productForm.get('name')?.errors?.['required']) {
+                Name is required
+                }
+                @if (productForm.get('name')?.errors?.['maxlength']) {
+                Name cannot exceed 100 characters
+                }
+              </div>
+              }
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Description</label>
+              <textarea class="form-control" formControlName="description" rows="3"
+                [class.is-invalid]="isFieldInvalid('description')"></textarea>
+              @if (isFieldInvalid('description')) {
+              <div class="invalid-feedback">
+                Description is required
+              </div>
+              }
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Price</label>
+              <input type="number" class="form-control" formControlName="price" step="0.01"
+                [class.is-invalid]="isFieldInvalid('price')">
+              @if (isFieldInvalid('price')) {
+              <div class="invalid-feedback">
+                Price must be greater than 0
+              </div>
+              }
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Stock</label>
+              <input type="number" class="form-control" formControlName="stock"
+                [class.is-invalid]="isFieldInvalid('stock')">
+              @if (isFieldInvalid('stock')) {
+              <div class="invalid-feedback">
+                Stock must be 0 or greater
+              </div>
+              }
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Discount Percentage</label>
+              <input type="number" class="form-control" formControlName="discountPercentage" step="0.1"
+                [class.is-invalid]="isFieldInvalid('discountPercentage')">
+              @if (isFieldInvalid('discountPercentage')) {
+              <div class="invalid-feedback">
+                Discount must be between 0 and 100
+              </div>
+              }
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Category</label>
+              <select class="form-select" formControlName="categoryId"
+                [class.is-invalid]="isFieldInvalid('categoryId')">
+                <option value="">Select Category</option>
+                @for (category of categories(); track category.id) {
+                <option [value]="category.id">{{ category.name }}</option>
+                }
+              </select>
+              @if (isFieldInvalid('categoryId')) {
+              <div class="invalid-feedback">
+                Category is required
+              </div>
+              }
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Product Image</label>
+              <input type="file" class="form-control" (change)="onFileSelect($event)" accept="image/*"
+                [class.is-invalid]="isFieldInvalid('image')">
+              @if (isFieldInvalid('image')) {
+              <div class="invalid-feedback">
+                Image is required
+              </div>
+              }
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+          <button type="button" class="btn btn-primary" [disabled]="!productForm.valid || isSubmitting()"
+            (click)="saveProduct()">
+            @if (isSubmitting()) {
+            <span class="spinner-border spinner-border-sm me-2"></span>
+            }
+            {{ isEditMode() ? 'Update' : 'Add' }} Product
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-backdrop fade show"></div>
+  }
+</section>

@@ -1,0 +1,36 @@
+<div class="container pt-4">
+  <div class="hero-section">
+    <div class="content-wrapper">
+      <div class="text-content" data-aos="fade-right">
+        <h2 class="text-dark display-5 fw-bold mb-3">
+          SuperMarket Daily Fresh Grocery
+        </h2>
+        <p class="lead mb-4">
+          Introduced a new model for online grocery shopping and convenient home delivery.
+        </p>
+        <button type="button" class="btn btn-dark" [routerLink]="['/products']">
+          Shop Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <app-category-list />
+
+  <div class="">
+    <h2 class="text-success display-5 fw-bold mt-3">
+      Popular Products
+    </h2>
+    <app-product-list />
+  </div>
+
+  <div class="banner-section my-5 p-5 bg-cream">
+    <h1 class="fw-bold display-5 text-dark">Every Day Fresh Organic Food</h1>
+      <p class="lead mt-3 text-dark">
+        Get <span class="text-success fw-bold">30% Off</span> Every Product
+      </p>
+      <a class="btn btn-success mt-3" routerLink="/products">
+        SHOP NOW
+      </a>
+  </div>
+</div>

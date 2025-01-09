@@ -1,0 +1,36 @@
+<div class="container my-5 pt-5">
+    <h2 class="text-success">Explore Products By Categories</h2>
+    <div id="carouselExampleControls" class="carousel p-5 slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div *ngFor="let i of getSlideIndexes()" class="carousel-item" [ngClass]="{ 'active': i === 0 }">
+                <div class="d-flex justify-content-center">
+                    <a class="card text-decoration-none p-3" *ngFor="let category of getCategoriesForSlide(i)">
+                        <div class="card-body d-flex flex-column align-items-center text-center">
+                            <div class="category-image mb-4">
+                                <img [src]="category.imageUrl" [alt]="category.name" class="img-fluid">
+                            </div>
+                            <h3 class="text-success mb-2">{{ category.name }}</h3>
+                            <p class="text-secondary flex-grow-1">{{ category.description }}</p>
+                            <button class="btn btn-sm btn-success mt-auto" [routerLink]="['/products/category', category.id]">
+                                Shop now
+                                <i class="fa fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>

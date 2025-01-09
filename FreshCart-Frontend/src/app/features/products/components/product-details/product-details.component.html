@@ -1,0 +1,188 @@
+<div class="container py-2">
+    <!-- Product Details Section -->
+    <div class="row gx-4 gx-lg-5 align-items-center mb-5">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <img [src]="product.imageUrl" [alt]="product.name" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+            <h4 class="mb-2">Category: {{ product.categoryName }}</h4>
+            <h2 class="display-6 fw-bold text-success">{{ product.name }}</h2>
+
+            <div class="fs-5 my-4">
+                @if (product.discountPercentage) {
+                <div class="d-flex align-items-center gap-2">
+                    <h3 class="text-dark mb-0">
+                        $ {{ calculateDiscountedPrice() }}
+                    </h3>
+                    <h4 class="text-decoration-line-through text-muted mb-0">
+                        $ {{ product.price }}
+                    </h4>
+                    <span class="badge bg-warning">
+                        {{ product.discountPercentage }}% OFF
+                    </span>
+                </div>
+                } @else {
+                <h3 class="text-dark">$ {{ product.price }}</h3>
+                }
+            </div>
+
+            <h5 class="mb-3">
+                Availability:
+                @if (product.stock > 0) {
+                <span class="badge bg-success">In Stock</span>
+                } @else {
+                <span class="badge bg-danger">Out Of Stock</span>
+                }
+            </h5>
+
+            <p class="lead mb-4">{{ product.description }}</p>
+
+            @if (product.stock > 0) {
+            <div class="d-flex align-items-center gap-2">
+                <div class="input-group" style="width: 150px;">
+                    <button class="btn btn-outline-secondary" type="button" (click)="decrementQuantity()">
+                        <i class="fa fa-minus"></i>
+                    </button>
+                    <input type="number" class="form-control text-center" [value]="quantity" readonly>
+                    <button class="btn btn-outline-secondary" type="button" (click)="incrementQuantity()">
+                        <i class="fa fa-plus"></i>
+                    </button>
+                </div>
+                <button class="btn btn-success" (click)="addToCart()">
+                    <i class="fa fa-cart-plus me-2"></i>
+                    Add to cart
+                </button>
+            </div>
+            }
+        </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="me-lg-5">
+                <h4 class="mb-3">Customer Reviews</h4>
+
+                @if (product.averageRating > 0) {
+                <div class="mb-3">
+                    <div class="d-flex align-items-center gap-2">
+                        @for (star of generateStars(product.averageRating); track $index) {
+                        <i class="fa fa-star text-warning"></i>
+                        }
+                        <span class="ms-2">{{ product.averageRating }} out of 5</span>
+                    </div>
+                    <small>{{ totalReviews() }} global ratings</small>
+                </div>
+
+                <div class="mb-4">
+                    @for (rating of ratingDistribution(); track $index) {
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="me-2 text-nowrap">
+                            {{ 5 - $index }}<i class="fa fa-star text-warning ms-1"></i>
+                        </div>
+                        <div class="progress flex-grow-1" style="height: 6px;">
+                            <div class="progress-bar bg-warning" [style.width.%]="(rating / totalReviews()) * 100">
+                            </div>
+                        </div>
+                        <div class="ms-2 text-nowrap">
+                            {{ ((rating / totalReviews()) * 100) | number:'1.0-0' }}%
+                        </div>
+                    </div>
+                    }
+                </div>
+                } @else {
+                <p>No ratings yet!</p>
+                }
+
+                <div class="d-grid">
+                    <h4>Review this product</h4>
+                    <p class="mb-3">Share your thoughts with other customers.</p>
+                    @if (isAuthenticated()) {
+                    <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#reviewModal">
+                        Write your Review
+                    </button>
+                    } @else {
+                    <button class="btn btn-outline-secondary" (click)="promptLogin()">
+                        Write your Review
+                    </button>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <h4 class="mb-4">Reviews</h4>
+            @if (product.reviews.length) {
+            @for (review of product.reviews; track review.id) {
+            <div class="d-flex border-bottom py-4">
+                <img src="https://i.pinimg.com/originals/0d/64/98/0d64989794b1a4c9d89bff571d3d5842.jpg"
+                    alt="User avatar" class="rounded-circle" style="width: 50px; height: 50px; object-fit: cover">
+                <div class="ms-3">
+                    <h6 class="mb-1">{{ review.userName }}</h6>
+                    <p class="small mb-2">
+                        <span class="text-muted">{{ review.reviewDate | date }}</span>
+                        <span class="text-primary ms-3 fw-bold">Verified User</span>
+                    </p>
+                    <div class="mb-2">
+                        @for (star of generateStars(review.rating); track $index) {
+                        <i class="fa fa-star text-warning"></i>
+                        }
+                    </div>
+                    <p class="mb-0">{{ review.comment }}</p>
+                </div>
+            </div>
+            }
+            } @else {
+            <div class="text-center py-5">
+                <p class="text-muted">No reviews yet</p>
+            </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- Review Modal -->
+<div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-success">Add Review</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="reviewForm">
+                    <div class="mb-3">
+                        <label class="form-label">Rating</label>
+                        <div>
+                            @for (star of ratingStars(); track $index) {
+                            <i [class]="star ? 'fa fa-star' : 'fa-regular fa-star'" class="text-warning fs-4"
+                                style="cursor: pointer" (click)="setRating($index + 1)"></i>
+                            }
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Comment</label>
+                        <textarea class="form-control" formControlName="comment" rows="3"
+                            placeholder="Write your feedback. What did you like or dislike?" [class.is-invalid]="reviewForm.get('comment')?.invalid && 
+                                  reviewForm.get('comment')?.touched"></textarea>
+                        @if (reviewForm.get('comment')?.invalid &&
+                        reviewForm.get('comment')?.touched) {
+                        <div class="invalid-feedback">
+                            Feedback is required and must be less than 255 characters
+                        </div>
+                        }
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Close
+                </button>
+                <button type="button" class="btn btn-success" [disabled]="!reviewForm.valid" (click)="submitReview()">
+                    Add Review
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

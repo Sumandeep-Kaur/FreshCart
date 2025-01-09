@@ -1,0 +1,19 @@
+.search-category-wrapper {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .input-group .form-control:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+  }
+
+  .input-group-text {
+    border-color: #ced4da;
+  }
+
+  @media (max-width: 991.98px) {
+    .search-category-wrapper {
+      display: none !important;
+    }
+  }

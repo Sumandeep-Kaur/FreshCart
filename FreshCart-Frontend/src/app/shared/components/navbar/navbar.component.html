@@ -1,0 +1,140 @@
+<div class="p-2 container border-bottom border-2">
+    <div class="container py-2">
+      <nav class="navbar navbar-expand-lg navbar-light p-0">
+        <div class="container-fluid p-0">
+          <!-- Logo -->
+          <a class="navbar-brand" routerLink="/">
+            <img src="https://freshcart.codescandy.com/assets/images/logo/freshcart-logo.svg" 
+                 alt="FreshCart" 
+                 height="35">
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="offcanvas" 
+            data-bs-target="#mobileMenu" 
+            aria-controls="mobileMenu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Main Menu Content -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <!-- Centered Search and Category -->
+            <div class="d-flex align-items-center mx-auto search-category-wrapper">
+              <div class="input-group">
+                <input 
+                  type="search" 
+                  class="form-control border-end-0" 
+                  placeholder="Search for Products"
+                  style="max-width: 400px;"
+                  [(ngModel)]="searchTerm"
+                  (keyup.enter)="onSearch()"
+                >
+                <span class="input-group-text bg-white border-start-0">
+                  <i class="fas fa-search text-muted"></i>
+                </span>
+              </div>
+
+              <div class="dropdown">
+                <button class="btn btn-outline-secondary dropdown-toggle rounded-3 px-4" 
+                        type="button" 
+                        data-bs-toggle="dropdown">
+                  {{ selectedCategory?.name || 'Categories' }}
+                </button>
+                <ul class="dropdown-menu">
+                  @for (category of categories; track category.id) {
+                    <li>
+                      <a class="dropdown-item" 
+                         href="#" 
+                         (click)="selectCategory(category, $event)">
+                        {{ category.name }}
+                      </a>
+                    </li>
+                  }
+                </ul>
+              </div>
+            </div>
+
+            <!-- Auth Buttons -->
+            <div class="ms-auto d-none d-lg-flex">
+              @if (currentUser$ | async; as user) {
+                <div class="dropdown">
+                  <button class="btn btn-link text-dark text-decoration-none dropdown-toggle" 
+                          type="button" 
+                          data-bs-toggle="dropdown">
+                    <i class="fas fa-user me-2"></i>{{ user.name }}
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" routerLink="/cart">
+                      <i class="fas fa-shopping-cart me-2"></i>My Cart</a>
+                    </li>
+                    <li><a class="dropdown-item" routerLink="/orders">
+                      <i class="fas fa-box me-2"></i>My Orders</a>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#" (click)="logout()">
+                      <i class="fas fa-sign-out-alt me-2"></i>Logout</a>
+                    </li>
+                  </ul>
+                </div>
+              } @else {
+                <a class="btn btn-outline-success me-2" routerLink="/auth/register">Sign Up</a>
+                <a class="btn btn-success" routerLink="/auth/login">Sign In</a>
+              }
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile Side Menu -->
+    <div class="offcanvas offcanvas-end d-lg-none" 
+         tabindex="-1" 
+         id="mobileMenu" 
+         aria-labelledby="mobileMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- Search in Mobile -->
+        <div class="mb-3">
+          <div class="input-group">
+            <input type="search" class="form-control" placeholder="Search for Products">
+            <span class="input-group-text bg-white">
+              <i class="fas fa-search"></i>
+            </span>
+          </div>
+        </div>
+
+        @if (currentUser$ | async; as user) {
+          <div class="mb-3">
+            <p class="mb-2"><i class="fas fa-user me-2"></i>{{ user.name }}</p>
+            <a class="d-block mb-2 text-decoration-none text-dark" routerLink="/cart">
+              <i class="fas fa-shopping-cart me-2"></i>My Cart
+            </a>
+            <a class="d-block mb-2 text-decoration-none text-dark" routerLink="/orders">
+              <i class="fas fa-box me-2"></i>My Orders
+            </a>
+            <a class="text-decoration-none text-dark" href="#" (click)="logout()">
+              <i class="fas fa-sign-out-alt me-2"></i>Logout
+            </a>
+          </div>
+        } @else {
+          <div class="d-grid gap-2 mb-3">
+            <a class="btn btn-outline-success" routerLink="/auth/register">Sign Up</a>
+            <a class="btn btn-success" routerLink="/auth/login">Sign In</a>
+          </div>
+        }
+
+        <div class="border-top pt-3">
+          <h6 class="mb-2">Categories</h6>
+          <a class="d-block mb-2 text-decoration-none text-dark" href="#">Fruits & Vegetables</a>
+          <a class="d-block mb-2 text-decoration-none text-dark" href="#">Dairy & Eggs</a>
+          <a class="d-block text-decoration-none text-dark" href="#">Beverages</a>
+        </div>
+      </div>
+    </div>
+  </div>

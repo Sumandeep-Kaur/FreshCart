@@ -1,0 +1,919 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dell\\source\\repos\\FreshCart\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.api\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|solutionrelative:freshcart.api\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.data\\migrations\\20250108055117_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|solutionrelative:freshcart.data\\migrations\\20250108055117_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|solutionrelative:freshcart.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|solutionrelative:freshcart.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|solutionrelative:freshcart.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\services\\orderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\dtos\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\dtos\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\dtos\\cartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\dtos\\cartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\services\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\services\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.data\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|solutionrelative:freshcart.data\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|solutionrelative:freshcart.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.api\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|solutionrelative:freshcart.api\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\interfaces\\ireviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\interfaces\\ireviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\dtos\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\dtos\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\dtos\\reviewadddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\dtos\\reviewadddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\services\\azurestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\services\\azurestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.data\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|solutionrelative:freshcart.data\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\interfaces\\iazurestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\interfaces\\iazurestorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.data\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|solutionrelative:freshcart.data\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|solutionrelative:freshcart.api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\dtos\\categorycreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\dtos\\categorycreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\dtos\\productcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\dtos\\productcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\dtos\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\dtos\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\dtos\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\dtos\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.data\\entities\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|solutionrelative:freshcart.data\\entities\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.data\\entities\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|solutionrelative:freshcart.data\\entities\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\interfaces\\iorderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.api\\logs\\freshcart-20241208.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|solutionrelative:freshcart.api\\logs\\freshcart-20241208.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.data\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|solutionrelative:freshcart.data\\entities\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Migrations\\20241208191818_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:FreshCart.Data\\Migrations\\20241208191818_Initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.data\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|solutionrelative:freshcart.data\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\dtos\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\dtos\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\dtos\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\dtos\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|solutionrelative:freshcart.data\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|solutionrelative:freshcart.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.api\\logs\\freshcart-20241207.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|solutionrelative:freshcart.api\\logs\\freshcart-20241207.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.data\\dbcontext\\freshcartcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|solutionrelative:freshcart.data\\dbcontext\\freshcartcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.api\\freshcart.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|solutionrelative:freshcart.api\\freshcart.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B73EBE4-3C4B-4895-ABBE-5EB9E05BEED7}|FreshCart.Api\\FreshCart.Api.csproj|solutionrelative:freshcart.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\interfaces\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\interfaces\\icartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.business\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{236FAB93-9EEF-4719-AFA0-38E0321AE8DA}|FreshCart.Business\\FreshCart.Business.csproj|solutionrelative:freshcart.business\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.data\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|solutionrelative:freshcart.data\\unitofwork\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.data\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|solutionrelative:freshcart.data\\unitofwork\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.data\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|solutionrelative:freshcart.data\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|c:\\users\\dell\\source\\repos\\freshcart\\freshcart.data\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{612535E8-D387-488E-9C72-0BF616036A73}|FreshCart.Data\\FreshCart.Data.csproj|solutionrelative:freshcart.data\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20250108055117_Initial.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Migrations\\20250108055117_Initial.cs",
+              "RelativeDocumentMoniker": "FreshCart.Data\\Migrations\\20250108055117_Initial.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Migrations\\20250108055117_Initial.cs",
+              "RelativeToolTip": "FreshCart.Data\\Migrations\\20250108055117_Initial.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T05:51:17.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Entities\\Review.cs",
+              "RelativeDocumentMoniker": "FreshCart.Data\\Entities\\Review.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Entities\\Review.cs",
+              "RelativeToolTip": "FreshCart.Data\\Entities\\Review.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAuwBwAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:17:10.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "FreshCart.Api\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\Controllers\\CartController.cs",
+              "RelativeToolTip": "FreshCart.Api\\Controllers\\CartController.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAYwC8AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T19:28:12.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "FreshCart.Api\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "FreshCart.Api\\Controllers\\OrdersController.cs",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAowAoAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T19:37:53.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "FreshCart.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\appsettings.json",
+              "RelativeToolTip": "FreshCart.Api\\appsettings.json",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAswAwAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-07T18:50:05.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\Program.cs",
+              "RelativeDocumentMoniker": "FreshCart.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\Program.cs",
+              "RelativeToolTip": "FreshCart.Api\\Program.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAuwC0AAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:45:36.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ReviewsController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\Controllers\\ReviewsController.cs",
+              "RelativeDocumentMoniker": "FreshCart.Api\\Controllers\\ReviewsController.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\Controllers\\ReviewsController.cs",
+              "RelativeToolTip": "FreshCart.Api\\Controllers\\ReviewsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T19:40:21.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OrderItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\OrderItemDto.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\DTOs\\OrderItemDto.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\OrderItemDto.cs",
+              "RelativeToolTip": "FreshCart.Business\\DTOs\\OrderItemDto.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAA0wA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:57:42.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Services\\ProductService.cs",
+              "RelativeToolTip": "FreshCart.Business\\Services\\ProductService.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAYwEAAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:39:45.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Services\\OrderService.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\Services\\OrderService.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Services\\OrderService.cs",
+              "RelativeToolTip": "FreshCart.Business\\Services\\OrderService.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAASwHEAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T19:22:31.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Services\\CartService.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\Services\\CartService.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Services\\CartService.cs",
+              "RelativeToolTip": "FreshCart.Business\\Services\\CartService.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwBsAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T19:13:53.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ReviewService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Services\\ReviewService.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\Services\\ReviewService.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Services\\ReviewService.cs",
+              "RelativeToolTip": "FreshCart.Business\\Services\\ReviewService.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAwwF4AAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T19:23:58.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CartItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\CartItemDto.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\DTOs\\CartItemDto.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\CartItemDto.cs",
+              "RelativeToolTip": "FreshCart.Business\\DTOs\\CartItemDto.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAqwA0AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:56:41.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrderDto.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\OrderDto.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\DTOs\\OrderDto.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\OrderDto.cs",
+              "RelativeToolTip": "FreshCart.Business\\DTOs\\OrderDto.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAuwBAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:57:14.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProductDto.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\ProductDto.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\DTOs\\ProductDto.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\ProductDto.cs",
+              "RelativeToolTip": "FreshCart.Business\\DTOs\\ProductDto.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAA1wBEAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:36:50.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "FreshCart.Api\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "FreshCart.Api\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAgwAgAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:42:52.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IReviewService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Interfaces\\IReviewService.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\Interfaces\\IReviewService.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Interfaces\\IReviewService.cs",
+              "RelativeToolTip": "FreshCart.Business\\Interfaces\\IReviewService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwA4AAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T19:01:36.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ReviewDto.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\ReviewDto.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\DTOs\\ReviewDto.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\ReviewDto.cs",
+              "RelativeToolTip": "FreshCart.Business\\DTOs\\ReviewDto.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAQwAwAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T00:26:58.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ReviewAddDto.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\ReviewAddDto.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\DTOs\\ReviewAddDto.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\ReviewAddDto.cs",
+              "RelativeToolTip": "FreshCart.Business\\DTOs\\ReviewAddDto.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAswA4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:58:10.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "FreshCart.Data\\Entities\\Product.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Entities\\Product.cs",
+              "RelativeToolTip": "FreshCart.Data\\Entities\\Product.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAA5wB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:14:02.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IAzureStorageService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Interfaces\\IAzureStorageService.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\Interfaces\\IAzureStorageService.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Interfaces\\IAzureStorageService.cs",
+              "RelativeToolTip": "FreshCart.Business\\Interfaces\\IAzureStorageService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T19:44:19.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\Services\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Services\\CategoryService.cs",
+              "RelativeToolTip": "FreshCart.Business\\Services\\CategoryService.cs",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAIwHcAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T03:27:00.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AzureStorageService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Services\\AzureStorageService.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\Services\\AzureStorageService.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Services\\AzureStorageService.cs",
+              "RelativeToolTip": "FreshCart.Business\\Services\\AzureStorageService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAG4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T19:45:25.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "FreshCart.Data\\Entities\\Category.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Entities\\Category.cs",
+              "RelativeToolTip": "FreshCart.Data\\Entities\\Category.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAgwBkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:13:32.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CategoryDto.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\CategoryDto.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\DTOs\\CategoryDto.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\CategoryDto.cs",
+              "RelativeToolTip": "FreshCart.Business\\DTOs\\CategoryDto.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwA0AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:55:48.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ICategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Interfaces\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\Interfaces\\ICategoryService.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Interfaces\\ICategoryService.cs",
+              "RelativeToolTip": "FreshCart.Business\\Interfaces\\ICategoryService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwAwAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T19:00:19.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "FreshCart.Api\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "FreshCart.Api\\Controllers\\CategoryController.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAgwDkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T19:02:22.205Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Interfaces\\IProductService.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\Interfaces\\IProductService.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Interfaces\\IProductService.cs",
+              "RelativeToolTip": "FreshCart.Business\\Interfaces\\IProductService.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAA0wA8AAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:38:16.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CategoryCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\CategoryCreateDto.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\DTOs\\CategoryCreateDto.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\CategoryCreateDto.cs",
+              "RelativeToolTip": "FreshCart.Business\\DTOs\\CategoryCreateDto.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAqwAoAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-29T19:10:07.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ProductCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\ProductCreateDto.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\DTOs\\ProductCreateDto.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\ProductCreateDto.cs",
+              "RelativeToolTip": "FreshCart.Business\\DTOs\\ProductCreateDto.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACIAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T20:04:48.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AuthResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\AuthResponse.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\DTOs\\AuthResponse.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\AuthResponse.cs",
+              "RelativeToolTip": "FreshCart.Business\\DTOs\\AuthResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:54:29.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Services\\AuthService.cs",
+              "RelativeToolTip": "FreshCart.Business\\Services\\AuthService.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAowDEAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T19:02:25.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CartDto.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\CartDto.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\DTOs\\CartDto.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\CartDto.cs",
+              "RelativeToolTip": "FreshCart.Business\\DTOs\\CartDto.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwAwAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:56:11.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Entities\\CartItem.cs",
+              "RelativeDocumentMoniker": "FreshCart.Data\\Entities\\CartItem.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Entities\\CartItem.cs",
+              "RelativeToolTip": "FreshCart.Data\\Entities\\CartItem.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAuwBgAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:15:54.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Entities\\Cart.cs",
+              "RelativeDocumentMoniker": "FreshCart.Data\\Entities\\Cart.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Entities\\Cart.cs",
+              "RelativeToolTip": "FreshCart.Data\\Entities\\Cart.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAxwBMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:15:28.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "IOrderService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Interfaces\\IOrderService.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\Interfaces\\IOrderService.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Interfaces\\IOrderService.cs",
+              "RelativeToolTip": "FreshCart.Business\\Interfaces\\IOrderService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAuwA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T19:01:08.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Entities\\OrderItem.cs",
+              "RelativeDocumentMoniker": "FreshCart.Data\\Entities\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Entities\\OrderItem.cs",
+              "RelativeToolTip": "FreshCart.Data\\Entities\\OrderItem.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAcwCAAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:16:45.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "freshcart-20241208.txt",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\logs\\freshcart-20241208.txt",
+              "RelativeDocumentMoniker": "FreshCart.Api\\logs\\freshcart-20241208.txt",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\logs\\freshcart-20241208.txt",
+              "RelativeToolTip": "FreshCart.Api\\logs\\freshcart-20241208.txt",
+              "ViewState": "AQIAAC0BAAAAAAAAAAAAAAcAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-12-08T05:14:27.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "20241208191818_Initial.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Migrations\\20241208191818_Initial.cs",
+              "RelativeDocumentMoniker": "FreshCart.Data\\Migrations\\20241208191818_Initial.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Migrations\\20241208191818_Initial.cs",
+              "RelativeToolTip": "FreshCart.Data\\Migrations\\20241208191818_Initial.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T19:18:18.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "FreshCart.Data\\Entities\\Order.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Entities\\Order.cs",
+              "RelativeToolTip": "FreshCart.Data\\Entities\\Order.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAqwBUAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:16:19.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\DTOs\\LoginRequest.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\LoginRequest.cs",
+              "RelativeToolTip": "FreshCart.Business\\DTOs\\LoginRequest.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:52:51.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\DTOs\\RegisterRequest.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\RegisterRequest.cs",
+              "RelativeToolTip": "FreshCart.Business\\DTOs\\RegisterRequest.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAxwA0AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:53:56.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\DTOs\\UserDto.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "FreshCart.Business\\DTOs\\UserDto.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwAsAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:54:54.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "FreshCart.Data\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Entities\\User.cs",
+              "RelativeToolTip": "FreshCart.Data\\Entities\\User.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwBwAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:12:02.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "FreshCart.Api\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "FreshCart.Api\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-08T05:08:29.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "freshcart-20241207.txt",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\logs\\freshcart-20241207.txt",
+              "RelativeDocumentMoniker": "FreshCart.Api\\logs\\freshcart-20241207.txt",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\logs\\freshcart-20241207.txt",
+              "RelativeToolTip": "FreshCart.Api\\logs\\freshcart-20241207.txt",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-12-08T05:16:29.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "FreshCartContext.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\DBContext\\FreshCartContext.cs",
+              "RelativeDocumentMoniker": "FreshCart.Data\\DBContext\\FreshCartContext.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\DBContext\\FreshCartContext.cs",
+              "RelativeToolTip": "FreshCart.Data\\DBContext\\FreshCartContext.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAowDIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:31:33.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "FreshCart.Api.csproj",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\FreshCart.Api.csproj",
+              "RelativeDocumentMoniker": "FreshCart.Api\\FreshCart.Api.csproj",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\FreshCart.Api.csproj",
+              "RelativeToolTip": "FreshCart.Api\\FreshCart.Api.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-08T03:24:05.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "FreshCart.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "FreshCart.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T19:12:17.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ICartService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Interfaces\\ICartService.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\Interfaces\\ICartService.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Interfaces\\ICartService.cs",
+              "RelativeToolTip": "FreshCart.Business\\Interfaces\\ICartService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T19:00:44.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "FreshCart.Business\\Interfaces\\IUserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:59:16.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "FreshCart.Business\\Interfaces\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Business\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "FreshCart.Business\\Interfaces\\IAuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:58:46.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "FreshCart.Data\\UnitOfWork\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\UnitOfWork\\UnitOfWork.cs",
+              "RelativeToolTip": "FreshCart.Data\\UnitOfWork\\UnitOfWork.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAUwDoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:35:55.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\UnitOfWork\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "FreshCart.Data\\UnitOfWork\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\UnitOfWork\\IUnitOfWork.cs",
+              "RelativeToolTip": "FreshCart.Data\\UnitOfWork\\IUnitOfWork.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:35:07.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Repositories\\Repository.cs",
+              "RelativeDocumentMoniker": "FreshCart.Data\\Repositories\\Repository.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Repositories\\Repository.cs",
+              "RelativeToolTip": "FreshCart.Data\\Repositories\\Repository.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAwwDcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:29:30.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Repositories\\IRepository.cs",
+              "RelativeDocumentMoniker": "FreshCart.Data\\Repositories\\IRepository.cs",
+              "ToolTip": "C:\\Users\\Dell\\source\\repos\\FreshCart\\FreshCart.Data\\Repositories\\IRepository.cs",
+              "RelativeToolTip": "FreshCart.Data\\Repositories\\IRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T18:28:44.981Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

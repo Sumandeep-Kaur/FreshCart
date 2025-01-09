@@ -1,0 +1,157 @@
+<div class="container py-5 position-relative">
+
+    <div class="row mb-4 bg-light rounded-3 p-4">
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h1 class="display-6 fw-bold text-success mb-2">Shop Cart</h1>
+            <p class="text-muted lead">Continue your shopping</p>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end align-items-center">
+            <img src="../../../../../assets/images/cart-img.svg" alt="Cart banner" 
+                class="img-fluid" style="max-height: 200px;">
+        </div>
+    </div>
+
+    <!-- Cart Items Section -->
+    @if (cart?.items?.length) {
+    <div class="row g-4">
+        <!-- Cart Items List -->
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body p-0">
+                    @for (item of cart?.items; track item.id) {
+                    <div class="border-bottom p-3">
+                        <div class="row align-items-center g-3">
+                            <!-- Product Image -->
+                            <div class="col-auto">
+                                <img [src]="item.product.imageUrl" [alt]="item.product.name" class="img-fluid rounded" style="width: 100px; height: 100px; object-fit: cover;">
+                            </div>
+            
+                            <!-- Product Name and Actions -->
+                            <div class="col-6 col-md-4 ms-5">
+                                <a [routerLink]="['/product-details', item.productId]" class="text-decoration-none fs-5 text-success fw-semibold">
+                                    {{ item.product.name }}
+                                </a>
+                                <div class="mt-2">
+                                    @if (item.product.discountPercentage) {
+                                        <span class="lead fw-bold">${{calculateDiscountedPrice(item.product)}}</span>
+                                        <span class="text-decoration-line-through text-muted"> ${{item.product.price}}</span>
+                                        } @else {
+                                        <span class="lead fw-bold">${{item.product.price}}</span>
+                                        }
+                                </div>
+                            </div>
+            
+                            <!-- Quantity Controls -->
+                            <div class="col-auto col-md-3">
+                                <div class="input-group input-group-sm">
+                                    <button (click)="decrement(item)" class="btn btn-outline-secondary" [disabled]="item.quantity <= 1">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                    <input type="text" class="form-control text-center" [value]="item.quantity" readonly>
+                                    <button (click)="increment(item)" class="btn btn-outline-secondary">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+            
+                            <!-- Price -->
+                            <div class="col text-end">
+                                <button class="btn btn-sm btn-outline-danger mt-1" (click)="deleteItem(item.id)">
+                                    <i class="fa fa-trash me-1"></i> Remove
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="d-flex gap-3 mt-4">
+                <button class="btn btn-success" (click)="makeOrder()">
+                    Continue Shopping
+                </button>
+            </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="h5 mb-4">Summary</h2>
+
+                    <div class="list-group list-group-flush mb-4">
+                        <div class="list-group-item d-flex justify-content-between">
+                            <span>Item Subtotal</span>
+                            <span>$ {{getTotalPrice()}}</span>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between">
+                            <span>Discount</span>
+                            <span>$ {{getTotalDiscount()}}</span>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between fw-bold">
+                            <span>Total</span>
+                            <span>$ {{getTotalPrice() - getTotalDiscount() | number:'1.2-2'}}</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-success w-100 mb-3" (click)="makeOrder()">
+                        Checkout ($ {{getTotalPrice() - getTotalDiscount() | number:'1.2-2'}})
+                    </button>
+
+                    <small class="text-muted">
+                        By placing your order, you agree to be bound by the Freshcart
+                        <a href="#" class="text-success">Terms of Service</a> and
+                        <a href="#" class="text-success">Privacy Policy</a>.
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    } @else {
+    <!-- Empty Cart -->
+    <div class="row justify-content-center align-items-center py-5">
+        <div class="col-md-8 text-center">
+            <img src="../../../../../assets/images/empty-cart.jpg" alt="Empty cart" class="img-fluid mb-4"
+                style="max-width: 400px;">
+            <h2 class="text-success mb-3">Your shopping cart is empty!</h2>
+            <p class="lead mb-4">
+                You have no items in your shopping cart. You'll find lots of interesting
+                products on our shop page.
+            </p>
+            <a routerLink="/home" class="btn btn-success">
+                Explore Products
+            </a>
+        </div>
+    </div>
+    }
+
+    <!-- Order Success Modal -->
+    @if (orderPlaced) {
+    <div class="position-fixed top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-black bg-opacity-50"
+        style="z-index: 1050;">
+        <div class="card mx-3">
+            <div class="card-body text-center p-4">
+                <div class="text-success mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor"
+                        class="bi bi-check-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                        <path
+                            d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                    </svg>
+                </div>
+                <h3 class="text-success mb-3">Thank You!</h3>
+                <p class="lead mb-4">Your order has been placed successfully!</p>
+                <div class="d-flex gap-2 justify-content-center">
+                    <a routerLink="/orders" class="btn btn-success">
+                        Order Details
+                    </a>
+                    <a routerLink="/home" class="btn btn-outline-success">
+                        Back Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+</div>

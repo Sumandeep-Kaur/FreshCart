@@ -1,0 +1,25 @@
+:host {
+    display: block;
+  }
+  
+  .form-control:disabled {
+    background-color: #fff;
+  }
+  
+  .input-group {
+    width: fit-content;
+    
+    .form-control {
+      max-width: 3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .input-group {
+      width: 100%;
+      
+      .form-control {
+        max-width: none;
+      }
+    }
+  }

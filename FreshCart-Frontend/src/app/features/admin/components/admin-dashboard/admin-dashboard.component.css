@@ -1,0 +1,22 @@
+.z-0 {
+  z-index: 0;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-img {
+  height: 150px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .card-img {
+    height: 120px;
+  }
+}

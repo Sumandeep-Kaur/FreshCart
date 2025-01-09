@@ -1,0 +1,16 @@
+.card {
+    transition: transform 0.2s;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  .card-img-top {
+    height: 200px;
+    object-fit: contain;
+    overflow: hidden;
+    transition: transform ease-in-out .5s;
+  }
+
+.card:hover .card-img-top {
+  transform: scale(1.2);
+}

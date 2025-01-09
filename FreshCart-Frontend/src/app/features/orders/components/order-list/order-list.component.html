@@ -1,0 +1,159 @@
+<div class="container py-4">
+    <div class="row mb-4 bg-light rounded-3 p-4">
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h1 class="display-6 fw-bold text-success mb-2">Your Orders</h1>
+            <p class="text-muted lead">Track and manage your shopping history</p>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end align-items-center">
+            <img src="../../../../../assets/images/cart-img.svg" alt="Orders banner" 
+                class="img-fluid" style="max-height: 200px;">
+        </div>
+    </div>
+
+    @if (orders.length) {
+        <!-- Orders List -->
+        @for (order of orders; track order.id) {
+            <div class="card shadow-sm mb-4">
+                <!-- Order Header -->
+                <div class="card-header bg-light">
+                    <div class="row align-items-center">
+                        <div class="col-md-3">
+                            <h6 class="mb-0">Order #{{ order.id }}</h6>
+                            <small class="text-muted">
+                                {{ order.orderDate | date:'medium' }}
+                            </small>
+                        </div>
+                        <div class="col-md-3">
+                            <h6 class="mb-0">Total Amount</h6>
+                            <strong class="text-success">
+                                {{ order.totalAmount | currency }}
+                            </strong>
+                        </div>
+                        <div class="col-md-3">
+                            <h6 class="mb-0">Status</h6>
+                            @switch (order.status.toLowerCase()) {
+                                @case ('pending') {
+                                    <span class="badge bg-warning">Pending</span>
+                                }
+                                @case ('processing') {
+                                    <span class="badge bg-info">Processing</span>
+                                }
+                                @case ('completed') {
+                                    <span class="badge bg-success">Completed</span>
+                                }
+                                @case ('cancelled') {
+                                    <span class="badge bg-danger">Cancelled</span>
+                                }
+                                @default {
+                                    <span class="badge bg-secondary">{{ order.status }}</span>
+                                }
+                            }
+                        </div>
+                        <div class="col-md-3 text-md-end">
+                            @if (order.status.toLowerCase() === 'pending') {
+                                <button class="btn btn-sm btn-outline-danger" 
+                                    >
+                                    <i class="bi bi-x-circle me-1"></i> Cancel Order
+                                </button>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Items -->
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th scope="col" class="ps-4">Product</th>
+                                    <th scope="col">Unit Price</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Discount</th>
+                                    <th scope="col" class="pe-4">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (item of order.items; track item.id) {
+                                    <tr>
+                                        <td class="ps-4">
+                                            <div class="d-flex align-items-center">
+                                                <img [src]="item.product.imageUrl" 
+                                                    [alt]="item.product.name"
+                                                    class="rounded me-3" 
+                                                    style="width: 48px; height: 48px; object-fit: cover;">
+                                                <div>
+                                                    <h6 class="mb-0">{{ item.product.name }}</h6>
+                                                    <small class="text-muted">
+                                                        {{ item.product.categoryName }}
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>{{ item.unitPrice | currency }}</td>
+                                        <td>
+                                            <span class="badge bg-light text-dark">
+                                                {{ item.quantity }}
+                                            </span>
+                                        </td>
+                                        <td>
+                                            @if (item.discountPercentage > 0) {
+                                                <span class="text-success">
+                                                    -{{ item.discountPercentage }}%
+                                                </span>
+                                            } @else {
+                                                <span class="text-muted">-</span>
+                                            }
+                                        </td>
+                                        <td class="pe-4">
+                                            <strong>{{ item.totalPrice | currency }}</strong>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot class="table-light">
+                                <tr>
+                                    <td colspan="4" class="text-end pe-4">
+                                        <strong>Total Items:</strong>
+                                    </td>
+                                    <td class="pe-4">
+                                        <strong>{{ order.items.length }}</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="text-end pe-4">
+                                        <strong>Order Total:</strong>
+                                    </td>
+                                    <td class="pe-4">
+                                        <strong class="text-success">
+                                            {{ order.totalAmount | currency }}
+                                        </strong>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        }
+    } @else {
+        <!-- Empty State -->
+        <div class="row justify-content-center py-5">
+            <div class="col-md-6 text-center">
+                <img src="../../../../../assets/images/empty-cart.jpg" 
+                    alt="No orders" 
+                    class="img-fluid mb-4" 
+                    style="max-width: 300px;">
+                <h2 class="h4 text-success mb-3">Your Orders List is Empty</h2>
+                <p class="text-muted mb-4">
+                    Looks like you haven't made any orders yet. 
+                    Check out our amazing products and start shopping!
+                </p>
+                <a routerLink="/products" class="btn btn-success">
+                    <i class="bi bi-cart me-2"></i>
+                    Start Shopping
+                </a>
+            </div>
+        </div>
+    }
+</div>

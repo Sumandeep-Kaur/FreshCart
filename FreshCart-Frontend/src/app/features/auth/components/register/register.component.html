@@ -1,0 +1,64 @@
+<div class="container py-3">
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="card border-0 shadow-sm" style="width: 450px;">
+            <div class="card-body p-5">
+                <!-- Header -->
+                <div class="text-center mb-5">
+                    <h1 class="h3 mb-1 fw-semibold text-success">Create an Account</h1>
+                    <p class="text-muted"><i>Get started with FreshCart</i></p>
+                </div>
+
+                <!-- Form -->
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label mb-0">Name</label>
+                        <input type="text" class="form-control" id="name" formControlName="name"
+                            placeholder="Enter your name" [class.is-invalid]="name?.invalid && name?.touched">
+                        @if (name?.invalid && name?.touched) {
+                        <div class="invalid-feedback">Name is required</div>
+                        }
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label mb-0">Email Address</label>
+                        <input type="email" class="form-control" id="email" formControlName="email"
+                            placeholder="Enter your email" [class.is-invalid]="email?.invalid && email?.touched">
+                        @if (email?.invalid && email?.touched) {
+                        <div class="invalid-feedback">
+                            Please enter a valid email address
+                        </div>
+                        }
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="password" class="form-label mb-0">Password</label>
+                        <input type="password" class="form-control" id="password" formControlName="password"
+                            placeholder="Create a password"
+                            [class.is-invalid]="password?.invalid && password?.touched">
+                        @if (password?.invalid && password?.touched) {
+                        <div class="invalid-feedback">
+                            Password must be at least 6 characters
+                        </div>
+                        }
+                    </div>
+
+                    <button type="submit" class="btn btn-success w-100 mb-3"
+                        [disabled]="registerForm.invalid || isLoading">
+                        @if (isLoading) {
+                        <span class="spinner-border spinner-border-sm me-2"></span>
+                        Creating account...
+                        } @else {
+                        Create Account
+                        }
+                    </button>
+
+                    <div class="text-center">
+                        <span class="text-muted">Already have an account? </span>
+                        <a routerLink="/auth/login" class="text-success text-decoration-none">Sign In</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
