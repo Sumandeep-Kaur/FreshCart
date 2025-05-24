@@ -1,7 +1,7 @@
 # FreshCart: Online Grocery Store
 FreshCart is a modern, scalable, and secure grocery store web application designed using the latest technologies. It integrates Angular (Frontend) and ASP.NET Core (Backend) to deliver a seamless user experience, alongside robust security measures and efficient data handling. This project provides a rich feature set for users, admins, and anonymous visitors, ensuring smooth grocery shopping and administrative operations.
 
-#### landing Page
+#### Landing Page
 ![shopfreshcart netlify app_](https://github.com/user-attachments/assets/0f783eee-2cc0-40c4-9170-b2c9aa0c58a6)
 
 
